@@ -5,78 +5,21 @@ import {
   Dimensions,
   StyleSheet,
   View,
-  Text,
 } from "react-native";
+import Ruler from "./Ruler";
+
 const { width } = Dimensions.get("window");
 
-const minAge = 18;
-const yearRange = 100;
-const segmentWidth = 2;
-const segmentSpacing = 10;
-const snapSegment = segmentWidth + segmentSpacing;
-const spacerWidth = (width - segmentWidth) / 2;
-const rulerWidth = spacerWidth * 2 + (yearRange - 1) * snapSegment;
-const indicatorWidth = 130;
-const ageRange = new Array(yearRange)
-  .fill(null)
-  .map((item, idx) => idx + minAge);
+const Slider = ({
+  minAge = 18,
+  segmentNum = 100,
+  segmentWidth = 1,
+  segmentSpacing = 10,
+}) => {
+  const spacerWidth = (width - segmentWidth) / 2;
+  const snapSegment = segmentWidth + segmentSpacing;
+  const rulerWidth = spacerWidth * 2 + (segmentNum - 1) * snapSegment;
 
-const Ruler = () => {
-  return (
-    <View style={styles.ruler}>
-      <View style={styles.spacer} />
-      <View
-        style={{
-          flex: 1,
-          flexDirection: "row",
-        }}
-      >
-        {ageRange.map((i) => {
-          const isEightEnd = (i + 2) % 10 === 0;
-          return (
-            <View
-              key={i}
-              style={{
-                flex: 1,
-                flexDirection: "column",
-              }}
-            >
-              <View
-                style={[
-                  styles.segment,
-                  {
-                    backgroundColor: "#999",
-                    height: isEightEnd ? 10 : 7,
-                    marginRight: i === ageRange.length - 1 ? 0 : segmentSpacing,
-                    marginBottom: isEightEnd ? 0 : 3,
-                  },
-                ]}
-              />
-              <View
-                style={{
-                  borderBottomWidth: 2,
-                  borderBottomColor: "#999",
-                }}
-              />
-              <Text
-                style={{
-                  position: "relative",
-                  left: -6,
-                  width: 30,
-                }}
-              >
-                {isEightEnd && i}
-              </Text>
-            </View>
-          );
-        })}
-      </View>
-      <View style={styles.spacer} />
-    </View>
-  );
-};
-
-const Slider = () => {
   const scrollViewRef = React.useRef();
   const textInputRef = React.useRef();
 
@@ -115,7 +58,7 @@ const Slider = () => {
           style={styles.ageTextStyle}
           defaultValue={minAge.toString()}
         />
-        <View style={[styles.segment, styles.indicator]} />
+        <View style={styles.indicator} />
       </View>
       <Animated.ScrollView
         ref={scrollViewRef}
@@ -136,12 +79,18 @@ const Slider = () => {
           { useNativeDriver: true }
         )}
       >
-        <Ruler />
+        <Ruler
+          segmentNum={segmentNum}
+          rulerWidth={rulerWidth}
+          segmentWidth={segmentWidth}
+          segmentSpacing={segmentSpacing}
+          spacerWidth={spacerWidth}
+          minAge={minAge}
+        />
       </Animated.ScrollView>
     </View>
   );
 };
-export default Slider;
 
 const styles = StyleSheet.create({
   container: {
@@ -154,8 +103,8 @@ const styles = StyleSheet.create({
     position: "relative",
     alignItems: "center",
     justifyContent: "center",
-    height: indicatorWidth,
-    width: indicatorWidth,
+    height: 130,
+    width: 130,
     backgroundColor: "#e8f6fc",
     borderRadius: 100,
   },
@@ -185,22 +134,11 @@ const styles = StyleSheet.create({
   scrollViewContainerStyle: {
     height: 100,
   },
-  ruler: {
-    width: rulerWidth,
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "row",
-  },
-  segment: {
-    width: segmentWidth,
-  },
   ageTextStyle: {
     fontSize: 42,
     fontWeight: "600",
     color: "#4d4f4e",
-    // fontFamily: "Menlo",
-  },
-  spacer: {
-    width: spacerWidth,
   },
 });
+
+export default Slider;

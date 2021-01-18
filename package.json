@@ -5,7 +5,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "test": "jest"
   },
   "dependencies": {
     "@react-native-community/masked-view": "0.1.10",
@@ -24,7 +25,20 @@
     "react-native-web": "~0.13.12"
   },
   "devDependencies": {
-    "@babel/core": "~7.9.0"
+    "@babel/core": "~7.9.0",
+    "@testing-library/jest-native": "^3.4.3",
+    "@testing-library/react-native": "^7.1.0",
+    "jest": "^26.6.3",
+    "jest-expo": "^40.0.1",
+    "jest-fetch-mock": "^3.0.3",
+    "react-native-test-library": "^1.0.0",
+    "react-test-renderer": "^17.0.1"
   },
-  "private": true
+  "private": true,
+  "jest": {
+    "preset": "jest-expo",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?(react-native|@?react-navigation|@react-native-community))"
+    ]
+  }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
-import { View, Text, SafeAreaView } from "react-native";
+import { View, Text, SafeAreaView, StyleSheet } from "react-native";
 import Button from "react-native-button";
 import Center from "./components/Center";
 import ProgressBar from "./components/ProgressBar";
@@ -15,17 +15,8 @@ const Home = ({ navigation }) => {
   return (
     <Center>
       <Button
-        style={{
-          fontSize: 20,
-          color: "white",
-        }}
-        containerStyle={{
-          padding: 10,
-          height: 50,
-          width: 250,
-          borderRadius: 100,
-          backgroundColor: "#27d2db",
-        }}
+        style={styles.btn}
+        containerStyle={styles.btnContainer}
         onPress={() => navigation.navigate(QuesParamList[0].question)}
       >
         Start Testing.
@@ -36,43 +27,12 @@ const Home = ({ navigation }) => {
 
 const QuestionLayout = ({ question, nextQues, component, navigation }) => {
   return (
-    <SafeAreaView
-      style={{
-        flex: 1,
-        flexDirection: "column",
-        alignItems: "center",
-        marginBottom: 50,
-        fontFamily: "Cochin",
-      }}
-    >
-      <Text
-        style={{
-          alignSelf: "flex-start",
-          fontSize: 30,
-          padding: 10,
-          fontWeight: "bold",
-          color: "#333536",
-        }}
-      >
-        {question}
-      </Text>
-      <Center>
-        {React.isValidElement(component) && component}
-        {/* <Text>ss</Text> */}
-      </Center>
-
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.queston}>{question}</Text>
+      <Center>{React.isValidElement(component) && component}</Center>
       <Button
-        style={{
-          fontSize: 20,
-          color: "white",
-        }}
-        containerStyle={{
-          padding: 10,
-          height: 50,
-          width: 250,
-          borderRadius: 100,
-          backgroundColor: "#27d2db",
-        }}
+        style={styles.btn}
+        containerStyle={styles.btnContainer}
         onPress={() => navigation.navigate(nextQues || HOME)}
       >
         {nextQues ? "Continue" : "End Test & Go to Home"}
@@ -80,6 +40,34 @@ const QuestionLayout = ({ question, nextQues, component, navigation }) => {
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: "column",
+    alignItems: "center",
+    marginBottom: 50,
+  },
+  queston: {
+    alignSelf: "flex-start",
+    fontSize: 30,
+    padding: 10,
+    fontWeight: "bold",
+    color: "#333536",
+  },
+  btn: {
+    fontSize: 20,
+    color: "white",
+  },
+  btnContainer: {
+    padding: 10,
+    height: 50,
+    width: 250,
+    borderRadius: 100,
+    backgroundColor: "#27d2db",
+  },
+});
+
 const customeTheme = {
   ...DefaultTheme,
   colors: {
@@ -87,6 +75,7 @@ const customeTheme = {
     background: "#FFF",
   },
 };
+
 export default function Routes() {
   return (
     <NavigationContainer theme={customeTheme}>

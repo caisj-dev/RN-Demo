@@ -1,0 +1,414 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Ruler /> snapshot 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "width": 50,
+      },
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "width": 20,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "column",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#999",
+            "height": 10,
+            "marginBottom": 0,
+            "marginRight": 5,
+            "width": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderBottomColor": "#999",
+            "borderBottomWidth": 2,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "left": -6,
+            "position": "relative",
+            "width": 30,
+          }
+        }
+      >
+        18
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "column",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#999",
+            "height": 7,
+            "marginBottom": 3,
+            "marginRight": 5,
+            "width": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderBottomColor": "#999",
+            "borderBottomWidth": 2,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "left": -6,
+            "position": "relative",
+            "width": 30,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "column",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#999",
+            "height": 7,
+            "marginBottom": 3,
+            "marginRight": 5,
+            "width": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderBottomColor": "#999",
+            "borderBottomWidth": 2,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "left": -6,
+            "position": "relative",
+            "width": 30,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "column",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#999",
+            "height": 7,
+            "marginBottom": 3,
+            "marginRight": 5,
+            "width": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderBottomColor": "#999",
+            "borderBottomWidth": 2,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "left": -6,
+            "position": "relative",
+            "width": 30,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "column",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#999",
+            "height": 7,
+            "marginBottom": 3,
+            "marginRight": 5,
+            "width": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderBottomColor": "#999",
+            "borderBottomWidth": 2,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "left": -6,
+            "position": "relative",
+            "width": 30,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "column",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#999",
+            "height": 7,
+            "marginBottom": 3,
+            "marginRight": 5,
+            "width": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderBottomColor": "#999",
+            "borderBottomWidth": 2,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "left": -6,
+            "position": "relative",
+            "width": 30,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "column",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#999",
+            "height": 7,
+            "marginBottom": 3,
+            "marginRight": 5,
+            "width": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderBottomColor": "#999",
+            "borderBottomWidth": 2,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "left": -6,
+            "position": "relative",
+            "width": 30,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "column",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#999",
+            "height": 7,
+            "marginBottom": 3,
+            "marginRight": 5,
+            "width": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderBottomColor": "#999",
+            "borderBottomWidth": 2,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "left": -6,
+            "position": "relative",
+            "width": 30,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "column",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#999",
+            "height": 7,
+            "marginBottom": 3,
+            "marginRight": 5,
+            "width": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderBottomColor": "#999",
+            "borderBottomWidth": 2,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "left": -6,
+            "position": "relative",
+            "width": 30,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "column",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#999",
+            "height": 7,
+            "marginBottom": 3,
+            "marginRight": 5,
+            "width": 10,
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "borderBottomColor": "#999",
+            "borderBottomWidth": 2,
+          }
+        }
+      />
+      <Text
+        style={
+          Object {
+            "left": -6,
+            "position": "relative",
+            "width": 30,
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "width": 20,
+      }
+    }
+  />
+</View>
+`;
