@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "RNDemo",
-    "slug": "RNDemo",
+    "name": "RN Demo",
+    "slug": "RN_demo",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -20,6 +20,8 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.csj2020.rn_demo",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
