@@ -31,7 +31,7 @@ function Ruler({
                 }}
               />
               <View style={styles.borderLine} />
-              <Text style={styles.num}>{isEightEnd && i}</Text>
+              {isEightEnd ? <Text style={styles.num}>{i}</Text> : null}
             </View>
           );
         })}
@@ -52,17 +52,17 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   col: {
-    flex: 1,
-    flexDirection: "column",
+    position: "relative",
   },
   borderLine: {
     borderBottomWidth: 2,
     borderBottomColor: "#999",
   },
   num: {
-    position: "relative",
-    left: -6,
+    position: "absolute",
     width: 30,
+    top: 20,
+    left: -8,
   },
 });
 
